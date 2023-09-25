@@ -4,9 +4,12 @@ const input = require('readline-sync');
 
 // TODO 1.1a: Define candidateName // 
 
-let candidateName= input.question('What is ur name..??');
+let candidateName;
+candidateName="";
 
-
+let question = "Who was the first American woman in space? ";
+let correctAnswer= "Sally Ride";
+let candidateAnswer= "";
 
 
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
@@ -17,16 +20,14 @@ let candidateAnswers = [];
 
 
 
-//TODO: Variables for Part 2
-let question;
-let correctAnswer;
-let candidateAnswer;
+
+
 
 
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-   //candidateName = prompt("What is your name?");
+   candidateName = input.question("What is your name? ");
    console.log("hello "+ candidateName + ' !');
 
 
@@ -63,13 +64,13 @@ function gradeQuiz(candidateAnswers) {
    console.log(`${i +1} ${questions[i]}\nCandidate answer: ${candidateAnswers[i]}\nCorrect answer: ${correctAnswers[i]}`+'\n')
   }
 //TODO 3.2 use this variable to calculate the candidates score.
-let grade = (numberOfCorrect / questions.length) * 100;
+let grade;/*= (numberOfCorrect / questions.length) * 100;
 console.log(`Overall Grade: ${grade}% (${numberOfCorrect} of ${questions.length} responses correct)`);
 if (grade >= 80){
     console.log(">>>> Status: PASSED <<<<");
 } else {
     console.log(">>>> Status: FAILED <<<<");
-}
+}*/
 return grade;
 }
 
